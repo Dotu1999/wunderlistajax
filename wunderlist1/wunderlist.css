@@ -1,0 +1,1104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+}
+
+
+ @media screen and (max-width:1010px){
+    .left{
+        width: 40px !important;
+        
+    }
+        .user-name{
+            display: none;
+        }
+        .starred text{
+            display: none;
+        }
+        .inbox text{
+            display: none;
+        } 
+
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url(../img/06.jpg);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover
+
+}
+.maint{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+/* css phần trái  */
+.left{
+    background-color: #F7F7F7;
+    width:280px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    overflow:hidden !important;
+    
+}
+    .menu-left{
+
+        display: flex;
+        background-color: #5B7A59;
+        cursor: pointer;
+        height: 45px;
+    }
+        .menu-left input{
+            outline: none;
+            background-color: #5B7A59;
+            flex-grow: 1;
+            font-size: 15px;
+            color: #D6D6D6;
+        }
+        .list-toggle{
+            margin-left: 11px;
+            margin-top: 11px;
+            margin-right: 7px;
+        }
+        .searchrtl-flip{
+            fill:white;
+            margin-right: 11px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+            
+        }
+        #Delete{
+            display: none;
+        }
+    .user-toobar{
+        display: flex;
+        height: 45px;
+        cursor: pointer;
+        
+    }
+        .user{
+            display: flex;
+            flex-grow: 1;
+            margin-top: 4px;
+        }
+            .user img{
+                border-radius: 50%;
+                height: 32px;
+                margin-top: 5px;
+                margin-left: 5px
+            }
+            .user-name{
+                margin-top: 12px;
+                margin-left: 4px;
+
+            }
+            .user svg{
+                margin-top: 10px;
+                margin-left: 4px;
+            }
+        .toobar{
+            margin-top: 16px
+        }
+            .conversationsrtl-flip{
+                margin-left: 20px;
+                margin-right: 8px;
+            }
+    .inbox{
+        height: 37px;
+        display: flex;
+        cursor: pointer;
+        
+    }
+    .cssrow{
+        background-color: #E0EEFA;
+    }
+        .inboxsvg{
+            margin-top: 9px;
+            margin-left: 10px;
+            margin-right: 10px;
+            fill: #2B8DEC;
+        } 
+        .inbox text{
+            margin-top: 9px;
+        }
+    .starred{
+        display: flex;
+        height: 37px;
+        cursor: pointer;
+    }
+         .starred svg{
+            margin-top: 9px;
+            margin-left: 7px;
+            fill:#DD594E;
+            margin-right: 10px
+        } 
+        .starred text{
+            margin-top: 9px
+        }
+    .list-icon{
+        height: 37px;
+        cursor: pointer;
+        display: flex;
+        overflow: hidden;
+    }
+    
+         .list-icon svg{
+            margin-left: 10px;
+            margin-top: 9px
+        } 
+            .namefoder{
+                margin-left: 10px;
+                margin-top: 9px;
+            }
+    .space{
+        flex-grow: 1;
+    }
+    .openbutton{
+        cursor: pointer;
+        display: flex;
+        height: 34px;
+        background-color: #328AD6;
+        color: #fff
+    }
+        #opbutton1{
+            margin-top: 2px;
+            padding:  5px;
+            border: 1px solid #fff;
+            border-radius: 25%;
+            margin-left: 10px;
+            margin-bottom: 4px;
+        }
+        #opbutton2{
+            margin-left: 40px;
+            margin-top: 11px;
+        }
+    .create-list{
+        cursor: pointer;
+        height: 42px;
+        display: flex;
+    }
+        .create-list svg{
+        fill:#328AD6;
+        margin-top:11px;
+        margin-left: 10px;
+        margin-right: 20px;
+        }
+         .create-list p{
+             color: #328AD6;
+            margin-top: 11px;
+            margin-left: -10px
+         }
+        /* phần bell */
+        #bell1{
+            width: 300px;
+            height: 240px;
+            position: absolute;
+            background:#FFFFFF;
+            border: #AEB6A2 1px solid;
+            top:84px;
+            left: 69px;
+            z-index: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+        }
+            #bell1 div h2{
+                color: #AEB6A2;
+            }
+            #bell1 div p{
+                color: #828282;
+            }
+        .bell1{
+            width: 50px;
+            height: 50px;
+            fill: #AEB6A2;
+        }
+        #titlebell{
+            font-weight: bold;
+            border-bottom: #7B7A7A 1px solid;
+            padding: 7px;
+
+        }
+        #under{
+            flex-grow: 1;
+            margin-top: 50px;
+            background-color: #FAFAFA;
+        }
+        /* phần tin nhắn */
+        #masage{
+            width: 300px;
+            height: 240px;
+            position: absolute;
+            background:#FFFFFF;
+            border: #AEB6A2 1px solid;
+            top:84px;
+            left: 108px;
+            z-index: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+        }
+        #masage center div svg{
+            width: 120px;
+            height: 120px;
+        }
+        #titelmasage{
+            font-size: 16px;
+            padding: 7px;
+            border-bottom: 1px solid  #AEB6A2;
+        }
+        #inermasge{
+            flex-grow: 1;
+            background-color: rgb(234, 238, 229);
+        }
+/* css bên phải  */
+.right{
+    background-color: #F7F7F7;
+    /* width: 367px; */
+    flex-basis: 367px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+    .title{
+        background-color: #fff;
+        display: flex;
+        height: 55px;
+        width: 100%;
+        margin: 1px;
+    }
+        #svg-right{
+            margin-top: -3px;
+            width: 23px;
+            cursor: pointer;
+            margin-right: 23px;
+        }
+        .detail-checked{
+            cursor: pointer;
+            margin-left: 15px;
+            margin-top: 17px;
+            margin-right: 15px;
+        }
+        .detail-check{
+            cursor: pointer;
+            margin-left: 15px;
+            margin-top: 21px;
+            margin-right: 15px;
+            border: 1px solid #383333;
+            border-radius: 15%;
+        }
+         .title div{
+            flex-grow: 1;
+            margin-top: 18px;
+            }
+        .title path {
+             margin-right: 5px;
+             border: 1px black solid;
+
+         }  
+         .date{
+             margin: 15px;
+             margin-top: 19px;
+         }
+         .namedate{
+             margin-top: 15px;
+             margin-left: 10px;
+         }
+         .nameoclock{
+            margin-top: 4px;
+            margin-left: -1px;
+         }
+         .addname{
+            outline:none;
+            margin-top: -1px;
+            margin-left: -2px;
+            font-size: 15px;
+         }
+         .addnote{
+             outline: none;
+             margin-top: -3px;
+             font-size: 15px;
+         }
+        .fullscreen{
+            cursor: pointer;
+            margin-top: 17px;
+            margin-right: 23px;
+            
+        }
+        .clip{
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px
+        }
+        .addtype{
+            margin-top: 15px;
+            flex-direction: 1;
+            outline: none;
+        }
+        .speech{
+            margin-top: 15px;
+        }
+        .dropbox{
+            margin-top: 15px;
+        }
+    .spaceright{
+        height: 260px; 
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .input_right {
+        font-size: 15px;
+        height: 30px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D6D6D6;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-right: 140px;
+        
+    }
+    .delete{
+        display: flex;
+        height: 43px;
+    }
+        .detail-info{
+            flex-grow: 1;
+            color: #a3a3a2;
+            font-size: 11px
+        }
+        .delete svg{
+            fill: #666666;
+            cursor: pointer;
+            margin-left: 9px;
+            margin-right: 9px;
+        }
+    #avaright{
+        /* display: none; */
+    }
+    .addcoment{
+        display: flex;
+        border-top: #DED2D2 1px solid;
+        height: 50px;
+        justify-content: flex-start;
+    }
+        .addcoment img{
+            height: 32px !important;
+            width: 32px !important;
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .addcoment div{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+            .addcoment div span{
+                font-weight: bold;
+                font-size: 15px;
+            }
+            .addcoment div div{
+                font-size: 13px;
+            }
+            .deletespace{
+                cursor: pointer;
+                float: right;
+                /* display:none; */
+            }
+        /* Css ở giữa  */
+.between{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 3;
+    position: relative;
+    z-index: 100px;
+}
+    .inbox-between{
+        font-size: 20px;
+        background-color: #668964;
+        height: 45px;
+        display: flex;
+    }
+        #inbox1{
+            font-size: 20px;
+            margin-top: 9px;
+            margin-left: 15px;
+            flex-grow: 1;
+            color: #fff;
+        }
+        #inbox-icon{
+            margin-top: 5px;
+            display: flex;
+            fill:white;
+            color: #fff;
+            font-size: 10px
+        }
+            .icon1{
+            cursor: pointer;
+            margin-right: 30px;
+            display: flex;
+            flex-direction: column;
+            }
+            #share{
+                fill: #C2D0C1;
+            }
+            #iconshare{
+                color: #C2D0C1;
+            }
+    .add-input{
+        display: flex;
+        margin: 10px;
+        height: 47px;
+        background-color: #668964;
+        fill:white;
+        margin-bottom: 13px;
+    }
+        .add-input svg{
+            cursor: pointer;
+            margin-top: 13px;
+            margin-left: 10px;
+            margin-right: 10px
+        }
+        .add-input input{
+            outline: none;
+            font-size: 15px;
+            flex-grow: 1;
+            background-color: #668964;
+            color: #fff;
+        }
+            .add-input span input{
+                background-color: #668964;
+            }
+        .starred{
+            margin-top: 5px !important;
+            margin-left: 3px !important;
+        }
+    .list-body{
+        background-color: #fff;
+        margin:5px;
+        height: 47px;
+        display: flex;
+        margin: 1px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+        .task-check{
+            border:#A5A5A5 1px solid;
+            margin-top: 15px;
+            margin-left: 10px;
+            border-radius: 20%
+        }
+        .list-body span{
+            flex-grow: 1; 
+            margin-left: 6px;
+            margin-top: 12px;
+            font-size: 15px;
+        }
+        .list-body svg{
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 12px;
+        }
+    .show{
+        cursor: pointer;
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: 188px;
+        height: 22px;
+        background-color: #668964;
+        color: #fff;
+    }
+    .showcompleted{
+        background-color: #fff;
+        margin:2px 10px 0.5px 10px;
+        height: 46px;
+        display: flex;
+        opacity: 0.5;
+        font-size: 15px;
+        /* display: none; */
+    }
+        .task-checked{
+            margin-top: 12px;
+            margin-left: 8px;
+        }
+        .showcompleted span{
+            text-decoration: line-through;
+            margin-top: 12px;
+            margin-left: 8px;
+            flex-grow: 1
+        }
+        .showcompleted svg{
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 12px;
+        }
+        
+/* Css của các cửa sổ phụ */
+/* Css cửa sổ nền  */
+#create-new-list{
+    opacity: 0.5;
+    width:100%;
+    height:100%;
+    background-color:black;
+    position: absolute;
+    z-index: 50px;
+    top: 0px;
+    display:none; 
+}
+/* Css cửa sổ new list  */
+     #addacout{
+        display: flex;
+        flex-direction: column;
+        background-color:#FAFAFA;
+        height: 298px;
+        width: 392px;
+        z-index: 100px;
+        position:absolute;
+        top: 13%;
+        left: 32%;
+        color: #737272;
+        display: none;
+
+    }
+        #addacout h3{
+            padding: 8px;
+        }
+        #addacout input{
+            outline: none;
+            padding: 9px 10px 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #D6D6D6;
+            font-size: 15px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 19px;
+            width: 85%;
+            
+        }
+        
+        #classtext{
+            height: 22px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+            .acouttext{
+                font-size: 12px;
+                font-weight: bold;
+                text-decoration: underline;
+                margin-right: 10px
+            } 
+        .nameadress{
+            font-size: 15px;
+            border: 1px solid #AFAFAF;
+            display: flex;
+            width: 90%;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+            .nameadress input{
+                flex-grow: 1;
+                border: none !important;
+                margin-bottom: 0px !important;
+            }
+            .nameadress svg{
+                margin-top: 8px;
+                margin-left: 5px;
+                margin-right: -20px;
+                fill: #7B7A7A;
+            }
+        .avarta-acout{
+            border: 1px solid  #AFAFAF;
+            height: 45px;
+            display: flex;
+            margin-top: 14px;
+        }
+            .avarta-acout img{
+                border-radius: 50%;
+                width: 20px;
+                border-radius: 100%;
+                width: 32px;
+                height: 32px;
+                margin-top: 5px;
+                margin-left: 18px;
+                margin-right: 10px;
+            }
+            #name-avatar{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+                #name-avatar p{
+                    font-size: 15px
+                }
+                #name-avatar text{
+                    font-size: 12px;
+                    color: #737272;
+                }
+            #Cancel-Save{
+                flex-grow: 1;
+                display: flex;
+            }
+                #Cancel-Save  .Cancel{
+                    width: 102px;
+                    height: 29px;
+                    border: 1px solid  #AFAFAF;
+                    margin-top: 10px;
+                    margin-left: 154px;
+                    margin-right: 12px;
+                    cursor: pointer;
+                }
+                #Cancel-Save  .Save{
+                    width: 102px;
+                    height: 29px;
+                    border: 1px solid  #AFAFAF;
+                    background-color: #2B8DEC;
+                    color: #D6D6D6;
+                    margin-top: 10px;
+                }
+                .Save{
+                    cursor: hover;
+                }
+/* Css của danh sach khi bấm vào avarta  */
+.list-avarta {
+    font-size: 13px;
+    background-color: #FFF;
+    width: 224px;
+    height: 378px;
+    position: absolute;
+    z-index: 150px;
+    top: 85px;
+    left: 10px;
+    border: 1px solid #AFAFAF;
+    display: none; 
+}
+    .list-avarta li{
+        height: 30px;
+        padding-top: 4px;
+        padding-left: 10px;
+    }
+    .li-disable{
+        color: #AAAAAA;
+        background-color: #FFF !important;
+    }
+    .list-avarta li:hover{
+        background-color: #2B8DEC;
+        cursor: pointer;
+    }
+/* Css của cửa sổ khi bấm chuột phải  */
+/* Loại 1  */
+.Mouse-right1{
+    font-size: 14px;
+    color: #262626;
+    width: 200px;
+    height: 62px;
+    position: absolute;
+    left: 136px;
+    top: 157px;
+    border: 1px solid #E6E6E6;
+    background-color: #FFF;
+    z-index: 200px;
+    list-style-type: none;
+    display: none; 
+}
+    .Mouse-right1 li{
+        cursor: pointer;
+        margin-top: 6px;
+        margin-left: 13px;
+        display: flex;
+    }
+         .email{
+             margin-left: 10px;
+         }
+         .Mouse-right1 li svg{
+            margin-top: 0px;
+            margin-right: 10px;
+        }
+    .Mouse-right1 li:hover{
+        background-color: #AAAAAA;
+    }
+/* Loại 2 */
+.Mouse-right2{
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    left: 134px;
+    top: 220px;
+    color: #262626;
+    font-size: 14px;
+    width: 200px;
+    height: 287px;
+    list-style-type: none;
+    border: 1px solid #E6E6E6;
+    display: none;
+}
+    .Mouse-right2 li{
+        display: flex;
+        padding: 8px;
+        cursor: pointer;
+    }
+        .Mouse-right2 li svg{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        .Mouse-right2 li:hover{
+            background-color: #AAAAAA
+        }
+/* Loại 3 */
+.Mouse-right3{
+    position: absolute;
+    z-index: 50px;
+    background: #fff;
+    font-size: 14px;
+    list-style-type: none;
+    border: 1px solid #E6E6E6;
+    left: 471px;
+    top: 143px;
+    width: 240px;
+    height: 371px;
+    display: none; 
+}
+    .Mouse-right3 li{
+        display: flex;
+        padding: 7px;
+        cursor: pointer;
+    }
+    .Mouse-right3 li:hover{
+    background-color: #AAAAAA
+    }
+        .Mouse-right3 li svg{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+/* Loại 4  */
+.Mouse-right4{
+    position: absolute;
+    z-index: 60px;
+    background: #fff;
+    font-size: 14px;
+    list-style-type: none;
+    border: 1px solid #E6E6E6;
+    width: 200px;
+    height: 180px;
+    top: 300px;
+    left: 500px;
+    display: none; 
+}
+    .Mouse-right4 li{
+        display: flex;
+        padding: 7px;
+        cursor: pointer;
+    }
+    .Mouse-right4 li:hover{
+        background-color: #AAAAAA;
+    }
+        .Mouse-right4 li svg{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+/* Css phần acount setting  */
+.Account-Setting{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 437px;
+    background-color: #FAFAFA;
+    font-size: 13px;
+    position: absolute;
+    top: 15%;
+    left:23%;
+    border: 1px solid #AAA8A8;
+    display: none;
+}
+    .main-account{
+        width: 100%;
+        height: 383px;
+        border-bottom: 1px solid #AAA8A8;
+        display: flex;
+    }
+        .main-account ul{
+            width: 132px;
+            border-right:  1px solid #AAA8A8;
+            list-style-type: none;
+            color: #7B7A7A;
+            cursor: pointer;
+        }
+        .main-account ul li{
+            
+            display: flex;
+        }
+        .main-account ul li:hover{
+            background-color: #AFAFAF;
+        }
+            .main-account ul li div{
+                margin-top: 10px;
+            }
+            .iconsettings-general{
+                background-image: url(img/app.png);
+                background-position: -157px 0;
+                width: 40px;
+                height: 40px;
+                transform: scale(.6);
+            }
+            .iconsettings-account{
+                background-image: url(img/app.png);
+                background-position: 0 -153px;
+                width: 40px;
+                height: 40px;
+                transform: scale(.6);
+            }
+            .iconsettings-shortcuts{
+                background-image: url(img/app.png);
+                background-position: -80px -153px;
+                width: 40px;
+                height: 40px;
+                transform: scale(.6);
+            }
+            .iconsettings-sidebar{
+                background-image: url(img/app.png);
+                background-position: -157px -00px;
+                width: 40px;
+                height: 40px;
+                transform: scale(.6);
+            }
+            .iconsettings-notifications{
+                background-image: url(img/app.png);
+                background-position: -60px -93px;
+                width: 40px;
+                height: 40px;
+                transform: scale(.6);
+            }
+            .iconsettings-about{
+                background-image: url(img/app.png);
+                background-position: -40px -153px;
+                width: 40px;
+                height: 40px;
+                transform: scale(.6);
+            }
+        /* css phần account  */
+        .inner-account{
+            flex-grow: 1;
+            overflow-y:scroll;
+            display: none;
+        }
+            .account-avatar{
+            width: 549px;
+            height: 160px;
+            background-color: #FAFAFA;
+            border-bottom: 1px solid #E0E0DF;
+            font-size: 13px;
+            display: flex;
+            }
+                .account-avatar img{
+                border-radius: 100%;
+                margin-left: 200px;
+                margin-top: 20px;
+                cursor: pointer;
+                height: 120px;
+            }
+                .account-avatar img:hover{
+                background-color:rgb(31, 161, 236)
+            }
+                .account-left{
+                    width: 200px;
+                    height: 100%;
+                }
+                    .account-left p{
+                        text-align: right;
+                        padding: 14px;
+                    }
+                .account-right{
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1
+                }
+                    .input{
+                    border: 1px solid #AAA8A8;
+                    border-radius: 7%;
+                    padding: 5px;
+                }
+                    .name{
+                        margin-right: 20px;
+                        margin-top: 10px;
+                        margin-bottom: 6px;
+                    }
+                    .disabled{
+                        color: #737272;
+                        background-color: #FFF;
+                        flex-grow: 1
+                    }
+                    #account-email{
+                        display: flex;
+                        margin-top: 10px;
+                        margin-bottom: 8px;
+                        
+                    }
+                    .change{
+                        border: 1px solid #AAA8A8;
+                        padding: 5px;
+                        color: #737272;
+                        cursor: pointer;
+                        text-align: center;
+                        width: 100px;
+                    }
+                    .email{
+                        margin-right: 20px;
+                        margin-left: 28px;
+                    }
+                    .password{
+                        margin-top: 9px;
+                        width: 155px;
+                        cursor: pointer;
+                    }
+        /* css phần general  */
+        .inner-general{
+            flex-grow: 1;
+            overflow-y: scroll;
+            display: flex;
+            display: none;
+        }
+            .general-left{
+                width: 328px;
+                height: 100%;
+            }
+                .general-left p{
+                    text-align: right;
+                    margin-right: 10px;
+                    padding: 20px;
+                }
+            .general-right{
+                display: flex;
+                flex-direction: column;
+            }
+                .general-right div{
+                    margin-top: 15px;
+                }
+                    .general-right div span{
+                        margin-right: 10px
+                    }
+                .list1{
+                    border: 1px solid #D6D6D6;
+                    padding: 5px;
+                }
+                    .language{
+                        margin-top: 15px;
+                    }
+                    .date1{
+                        margin-top: 25px;
+                    }
+                    .day{
+                        margin-top: 10px;
+                    }
+            
+    .fooder{
+        flex-grow: 1;
+    }
+        .fooder  div{
+            background-color: #2B8DEC;
+            color: whitesmoke;
+            width: 76px;
+            height: 16px;
+            margin-top: 10px;
+            padding: 10px;
+            margin-left: 555px;
+            padding: 8px;
+            padding-left: 49px;
+            border-radius: 5%;
+            cursor: pointer;
+        }
+        .fooder  div:hover{
+            background-color: #328AD6
+        }
+    /* phần list của sort  */
+    #sort1{
+        width: 250px;
+        height: 170px;
+        position: absolute;
+        top: 45px;
+        right: 0px;
+        background-color: #668964;
+        list-style-type: none;
+        display: none;
+        z-index: 1000;
+    }
+    #sort1 li{
+        font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+        font-size: 14px;
+        color:#F5FFF5;
+        padding: 7px;
+        display: flex;
+        justify-content:flex-start;
+        cursor: pointer;
+    }
+    #sort1 li:hover{
+        background-color: rgb(104, 99, 99)
+    }
+    #sort1 li svg{
+        fill:#F5FFF5;
+    }
+    #sort1 li text{
+        padding-left: 5px;
+    }
+    /* phần cửa sổ của more  */
+    #more1{
+        width: 255px;
+        height: 275px;
+        position: absolute;
+        top: 45px;
+        right: 0px;
+        background-color: #668964;
+        list-style-type: none;
+        display: none;
+        z-index: 10;
+    }
+    #more1 li{
+        font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+        font-size: 14px;
+        color:#F5FFF5;
+        padding: 9px;
+        display: flex;
+        justify-content:flex-start;
+        cursor: pointer;
+    }
+    #more1 li:hover{
+        background-color: rgb(104, 99, 99)
+    }
+    #more1 li svg{
+        fill:#F5FFF5;
+    }
+    #more1 li text{
+        padding-left: 5px;
+    }
+    .redsao{
+        fill: #D74E48;
+        margin-top: 0px !important;
+    }
+    .create_day{
+        font-size: 14px;
+    color: #A72825;
+    margin-top: 14px;
+    margin-right: 10px;
+    }
+    .de{
+        display: none;
+    }
